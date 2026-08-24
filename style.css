@@ -23,7 +23,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.65;
 }
 
@@ -43,7 +43,7 @@ header nav {
 }
 
 header nav a {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   font-weight: 500;
   color: var(--muted);
   text-decoration: none;
@@ -63,7 +63,7 @@ header h1 {
 header p {
   margin: 0 0 1.5rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.2srem;
 }
 
 .profile-header {
@@ -91,7 +91,7 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.4rem;
@@ -137,7 +137,7 @@ table td:first-child {
   width: 7.5rem;
   padding-right: 1rem;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 1rem;
   white-space: nowrap;
 }
 
@@ -156,12 +156,12 @@ ul li {
 ul li p {
   margin: 0 0 0.2rem;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 1.1 rem;
 }
 
 ul li h1 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 ul li h1 a {
@@ -185,6 +185,67 @@ article img {
   margin: 1rem auto;
 }
 
+article figure {
+  margin: 1rem auto;
+}
+
+article figure img {
+  margin: 0 auto;
+}
+
+article figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
 strong {
   font-weight: 600;
+}
+
+/* Let wide KaTeX display equations scroll horizontally instead of overflowing the page */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+/* Collapsible derivation blocks */
+details.derivation {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem 0.1rem;
+  margin: 0 0 1.1rem;
+}
+
+details.derivation summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--link);
+  list-style: none;
+}
+
+details.derivation summary::-webkit-details-marker {
+  display: none;
+}
+
+details.derivation summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.7em;
+  transition: transform 0.15s ease;
+}
+
+details.derivation[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details.derivation summary:hover {
+  text-decoration: underline;
+}
+
+details.derivation p:first-of-type {
+  margin-top: 1rem;
 }
